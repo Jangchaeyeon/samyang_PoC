@@ -55,6 +55,10 @@ display(spark.sql(f"SELECT * FROM {table_name}"))
 
 # COMMAND ----------
 
+X
+
+# COMMAND ----------
+
 # MAGIC %md 우선 UI를 사용하여 AutoML을 사용하기 위해서는 좌측 사이드바 메뉴에서 `Machine Learning role`로 변경해주어야 합니다. 그리고 사이드바 메뉴에서 `Experiments`로 이동합니다. `Experiments` 화면 좌측 상단에 있는 `Create AutoML Experiment`를 클릭합니다
 # MAGIC 
 # MAGIC <img src="http://files.training.databricks.com/images/301/AutoML_1_2.png" alt="step12" width="750"/>
