@@ -177,13 +177,13 @@ output_table.output_table_total(dj1_result=result_daejeon1,
 # - save : TB_BDA_PRED_HOURLY, TB_BDA_MODEL_EVAL 에 통합DR 업데이트
 db_dml.tb_bda_model_eval_total_update(test_datetime)
 
-# 매일 13시마다 메일 발송
-if test_hour == "13":
-    if len(result['result_plan_performance']) > 0 and len(result['result_actual_performance']) > 0:
-        send_mail.send_mail()
-    # if datetime.datetime.today().weekday() != 5 and datetime.datetime.today().weekday() != 6:  # dr참여 결과 전송은 주말 제외
-    if is_work_day():  # workday 인 경우에 만 메일 발송
-        send_mail.send_mail_dr('1300')  # 전체
-        #send_mail.send_mail_dr('1302')  # 진천
-        #send_mail.send_mail_dr('1303')  # 대전1
-        #send_mail.send_mail_dr('1304')  # 대전2
+# # 매일 13시마다 메일 발송
+# if test_hour == "13":
+#     if len(result['result_plan_performance']) > 0 and len(result['result_actual_performance']) > 0:
+#         send_mail.send_mail()
+#     # if datetime.datetime.today().weekday() != 5 and datetime.datetime.today().weekday() != 6:  # dr참여 결과 전송은 주말 제외
+#     if is_work_day():  # workday 인 경우에 만 메일 발송
+#         send_mail.send_mail_dr('1300')  # 전체
+#         #send_mail.send_mail_dr('1302')  # 진천
+#         #send_mail.send_mail_dr('1303')  # 대전1
+#         #send_mail.send_mail_dr('1304')  # 대전2
